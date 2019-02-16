@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="./rps.css" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors!</h1>
+    <form class="options">
+        <input type="image" class="option" src="http://1000awesomethings.com/wp-content/uploads/2008/08/rock.jpg" alt="rock" value="Rock">
+        <input type="image" class="option" src="http://1000awesomethings.com/wp-content/uploads/2008/08/paper.jpg" alt="paper" value="Paper">
+        <input type="image" class="option" src="http://1000awesomethings.com/wp-content/uploads/2008/08/scissors.jpg" alt="scissors" value="Scissors">
+    </form>
+    <p>Select an option</p>
+    <div class="results">
+        <div class="selections">
+            <p class="user-selection"></p>
+            <p class="cpu-selection"></p>
+        </div>
+        <footer class="scores">
+            <p class="matches-played">Matches Played: 0</p>
+            <p class="user-score">Your Wins: 0</p>
+            <p class="cpu-score">CPU Wins: 0</p>
+            <p class="draws">Draws: 0</p>
+        </footer>
+    </div>
+    <script src="./rps.js"></script>
+</body>
+</html>
