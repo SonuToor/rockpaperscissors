@@ -1,0 +1,40 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: rgb(243, 157, 28);
+}
+h1 {
+    font-size: 50px;
+}
+p {
+    font-size: 30px;
+}
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.option {
+    width: 250px;
+    height: 250px;
+    transition: all .07s ease;
+    border-radius: 25px;
+}
+.option:focus {
+    outline: none;
+}
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.selections {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.selected {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
