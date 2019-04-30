@@ -61,8 +61,8 @@ function removeClass(e) {
 
 function updateScores() {
 
-    matchCount.innerHTML = `Matches Played: ${matchTally}`;
-    userScore.innerHTML = `Your Wins: ${userTally}`;
-    cpuScore.innerHTML = `CPU Wins: ${cpuTally}`;
-    drawCount.innerHTML = `Draws: ${drawTally}`;
+    matchCount.nextElementSibling.innerHTML = `${matchTally}`;
+    userScore.nextElementSibling.innerHTML = `${userTally}`;
+    cpuScore.nextElementSibling.innerHTML = `${cpuTally}`;
+    drawCount.nextElementSibling.innerHTML = `${drawTally}`;
 }
