@@ -16,13 +16,37 @@ const cpuScore = document.querySelector(".cpu-score");
 const userOptions = document.querySelectorAll(".option");
 userOptions.forEach(option => option.addEventListener('click', playMatch));
 userOptions.forEach(option => option.addEventListener('transitionend', removeClass));
+document.addEventListener("keyup", playMatch);
+
 
 function playMatch(e) {
     e.preventDefault();
-    
-    userSelection = e.target.value;
+
+    let userSelection; 
+    let option; 
+
+    if (e.type == "click") {
+        userSelection = e.target.value;
+        option = e.target; 
+    }
+
+    if (e.type == "keyup") {
+        if (e.key == "r") {
+            userSelection = 'Rock'
+            option = document.querySelectorAll(`input[value=${userSelection}]`)[0];
+        }
+        if (e.key == "p") {
+            userSelection = "Paper"
+            option = document.querySelectorAll(`input[value=${userSelection}]`)[0];
+        }
+        if (e.key == "s") {
+            userSelection = "Scissors"
+            option = document.querySelectorAll(`input[value=${userSelection}]`)[0];
+         }
+    }
+
     let cpuSelection = options[Math.floor(Math.random()*options.length)];
-    displaySelections(cpuSelection, userSelection, e.target);
+    displaySelections(cpuSelection, userSelection, option);
     
     matchTally ++;
 
@@ -66,3 +90,4 @@ function updateScores() {
     cpuScore.nextElementSibling.innerHTML = `${cpuTally}`;
     drawCount.nextElementSibling.innerHTML = `${drawTally}`;
 }
+

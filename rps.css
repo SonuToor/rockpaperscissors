@@ -9,6 +9,9 @@ h1 {
 p {
     font-size: 30px;
 }
+.instructions {
+    font-size: 22px; 
+}
 .options {
     display: flex;
     justify-content: space-evenly;
